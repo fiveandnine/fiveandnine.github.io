@@ -197,7 +197,8 @@
 <li>upating</li>
 <li>unmounting</li>
 </ul>
-<h2 id="旧生命周期"><a href="#旧生命周期" class="headerlink" title="旧生命周期"></a>旧生命周期</h2><h3 id="mounting（6个什么周期函数）"><a href="#mounting（6个什么周期函数）" class="headerlink" title="mounting（6个什么周期函数）"></a>mounting（6个什么周期函数）</h3><ol>
+<h2 id="旧生命周期"><a href="#旧生命周期" class="headerlink" title="旧生命周期"></a>旧生命周期</h2><p><img src="https://user-gold-cdn.xitu.io/2019/6/10/16b41956d9dc2dfe?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="旧生命周期"></p>
+<h3 id="mounting（6个什么周期函数）"><a href="#mounting（6个什么周期函数）" class="headerlink" title="mounting（6个什么周期函数）"></a>mounting（6个什么周期函数）</h3><ol>
 <li>constructor(props)<br>加载时调用一次，可以用来设置state等</li>
 <li><p>getDefaultProps()<br>给props设置默认值，dufaultProps</p>
 </li>
@@ -228,6 +229,7 @@
 <h2 id="新生命周期"><a href="#新生命周期" class="headerlink" title="新生命周期"></a>新生命周期</h2><h3 id="mounting-4个生命周期函数"><a href="#mounting-4个生命周期函数" class="headerlink" title="mounting(4个生命周期函数)"></a>mounting(4个生命周期函数)</h3><ol>
 <li>constructor<br>设置state</li>
 <li><p>static getDerivedStateFromProps(props, state)<br>挂载时调用的最后一个方法，根据初始的props来设置state<br>函数return的就是state，<br>注意： 我们可以将此代码放在 constructor 中，与之相 getDerivedStateFromProps的优点是它更直观 - 它仅用于设置状态，而构造函数有多种用途。<br>总结： getDerivedStateFromProps 的最常见用例（在mount期间）：根据初始props返回状态对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class ScrollingList extends React.Component &#123;</span><br><span class="line">  listRef = React.createRef();</span><br><span class="line"></span><br><span class="line">  getSnapshotBeforeUpdate(prevProps, prevState) &#123;</span><br><span class="line">    // 如果在列表中添加新项目</span><br><span class="line">    // 获取列表的当前高度，以便我们稍后调整滚动</span><br><span class="line">    if (prevProps.list.length &lt; this.props.list.length) &#123;</span><br><span class="line">      return this.listRef.current.scrollHeight;</span><br><span class="line">    &#125;</span><br><span class="line">    return null;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidUpdate(prevProps, prevState, snapshot) &#123;</span><br><span class="line">    // 如果我们 snapshot 的值不为空，说明添加了新项目</span><br><span class="line">    // 调整滚动，以便这些新项目不会将旧项目推出可视区域</span><br><span class="line">    if (snapshot !== null) &#123;</span><br><span class="line">      this.listRef.current.scrollTop +=</span><br><span class="line">        this.listRef.current.scrollHeight - snapshot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div ref=&#123;this.listRef&#125;&gt;&#123;/* ...contents... */&#125;&lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>render</p>
 </li>
@@ -255,8 +257,13 @@
 <li><p>getDerivedStateFromError<br>不做任何负面作用，只是设置state，返回值就是state，捕获任何地方的js错误</p>
 </li>
 <li><p>componentDidCatch<br>只捕获生命周期和render的错误<br>与 getDerivedStateFromError 区别在于不是为了响应错误而更新状态，可以执行任何副作用，例如记录错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class ErrorBoundary extends Component &#123;</span><br><span class="line">  state = &#123; errorMessage: null &#125;;</span><br><span class="line">  static getDerivedStateFromError(error) &#123;</span><br><span class="line">    return &#123; errorMessage: error.message &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  componentDidCatch(error, info) &#123;</span><br><span class="line">    console.log(error, info);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    if (this.state.errorMessage) &#123;</span><br><span class="line">      return &lt;h1&gt;Oops! &#123;this.state.errorMessage&#125;&lt;/h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">    return this.props.children;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>reference</p>
+<blockquote>
+<p><a href="https://juejin.im/post/5c9b57d65188251d081cba4a#heading-6" target="_blank" rel="noopener">React v16 生命周期函数详解：如何、何时使用它们（React 组件生命周期的修订和最新指南）</a></p>
+</blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
