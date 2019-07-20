@@ -197,6 +197,10 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<p>简介：js数组相关操作笔记</p>
+<h2 id="数组属性"><a href="#数组属性" class="headerlink" title="数组属性"></a>数组属性</h2><p>length</p>
+<p>prototype<br>可以挂在方法</p>
+<p>constructor</p>
+<h2 id="判断数组"><a href="#判断数组" class="headerlink" title="判断数组"></a>判断数组</h2><p>typeof  //String Object Number Undefined<br>instanceof 返回true或false<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">instanceof Array</span><br></pre></td></tr></table></figure></p>
 <h2 id="数组新建"><a href="#数组新建" class="headerlink" title="数组新建"></a>数组新建</h2><p>Array === new Array<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const list1 = Array()    //[]</span><br><span class="line">const list2 = Array(3)   //[ , , ]</span><br><span class="line">const list3 = Array(3,4,5)  //[3,4,5]</span><br></pre></td></tr></table></figure></p>
 <p>Array.of()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const list1 = Array.of()    []</span><br><span class="line">const lsit2 = Array.of(3)   //[3]</span><br><span class="line">const list3 = Array.of(3,4,5)   [3,4,5]</span><br></pre></td></tr></table></figure></p>
 <p>Array.from()<br>参数：</p>
@@ -213,21 +217,21 @@
 <p>splice<br>参数：</p>
 <ul>
 <li>1.必填 起始位置</li>
-<li>2.选填 删除的数量</li>
-<li>3.选填 要插入的新项目<br>返回删除的项目组成的数组，没有删除返回[]<br>注：<ol>
-<li>如果元素不够，到最后一个为止<br>2.插入是在开始位置前面</li>
-</ol>
-</li>
+<li>2.选填 删除的数量(长度)</li>
+<li>3.选填 要插入的新项目<br>返回删除的项目组成的数组，没有删除返回[]<br>注：</li>
 </ul>
+<ol>
+<li>如果元素不够，到最后一个为止</li>
+<li>插入是在开始位置前面</li>
+</ol>
 <p>sort<br>参数：</p>
 <ul>
-<li>参数可选: 规定排序顺序的比较函数，函数的两个参数(a, b)是要比较的两个参数，返回&lt;0，则a在b前</li>
-<li>。<br>会调用toString()方法 按Unicode排序<br><a href="https://juejin.im/entry/59f7f3346fb9a04514635552" target="_blank" rel="noopener">实现机制-深入了解javascript的sort方法</a></li>
+<li>参数可选: 规定排序顺序的比较函数，函数的两个参数(a, b)是要比较的两个参数，返回&lt;0，则a在b前<br>会调用toString()方法 按Unicode排序<br><a href="https://juejin.im/entry/59f7f3346fb9a04514635552" target="_blank" rel="noopener">实现机制-深入了解javascript的sort方法</a></li>
 </ul>
 <p>reverse</p>
 <p>copyWithin<br>指定位置的成员复制到其他位置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.copyWithin(target, start, end)</span><br></pre></td></tr></table></figure></p>
 <ol>
-<li>不包括end</li>
+<li><em>不包括end</em></li>
 <li>数组的长度不会改变，<em>读了几个元素就从开始被替换的地方替换几个元素</em></li>
 <li>第一个参数是开始被替换的元素位置</li>
 </ol>
@@ -237,25 +241,52 @@
 <li>开始位置</li>
 <li>终止位置（不包括）默认为数组长度</li>
 </ul>
-<p>###不改变原数组的8个方法<br>slice前拷贝数组项目<br>参数：</p>
+<h3 id="不改变原数组的8个方法"><a href="#不改变原数组的8个方法" class="headerlink" title="不改变原数组的8个方法"></a>不改变原数组的8个方法</h3><p>slice前拷贝数组项目<br>参数：</p>
 <ul>
 <li>起始位置</li>
-<li>结束位置（不包括）</li>
+<li>结束位置（<em>不包括end</em>）（coopyWithinu也不包括）</li>
 </ul>
-<p>concat<br>join<br>indexOf<br>lastIndexOf<br>toLocateString<br>每个链接的项目使用join(‘,’) 方法连接</p>
+<p>concat<br>连接两个数组，返回新数组</p>
+<p>join<br>使用特定字符连接数组项目</p>
+<p>indexOf<br>查找第一个符合条件的项目下标<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.indexOf(searchElement,fromIndex)</span><br></pre></td></tr></table></figure></p>
+<p>lastIndexOf<br>查找最后一个位置</p>
+<p>toLocateString<br>每个链接的项目使用join(‘,’) 方法连接</p>
 <p>toString<br>值得注意的是：当数组和字符串操作的时候，js 会调用这个方法将数组自动转换成字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let b= [ &apos;toString&apos;,&apos;演示&apos;].toString(); // toString,演示</span><br><span class="line">let a= [&apos;调用toString&apos;,&apos;连接在我后面&apos;]+&apos;啦啦啦&apos;; // 调用toString,连接在我后面啦啦啦</span><br></pre></td></tr></table></figure></p>
 <p>includes</p>
-<h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><p>forEach<br>map<br>filter<br>some<br>every<br>reduce<br>reduceRight</p>
-<p>find<br>findIndex<br>keys<br>values<br>entries</p>
+<h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><ul>
+<li>空数组不执行</li>
+<li>在迭代过程中删除的会跳过回调函数，修改的会传入新值</li>
+<li>遍历次数在第一次执行就确定，在增加不会执行回调函数<br>forEach<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(function(item, index, array)&#123;&#125;, thisValue)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>无法退出，只能用return 返回，进入下一次循环</li>
+<li>总是返回undefined，即使你返回了一个指</li>
+</ol>
+<p>map<br>返回新数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.map(function(item, index, array)&#123;&#125;, thisValue)</span><br></pre></td></tr></table></figure></p>
+<p>filter<br>过滤 返回符合条件的值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.filter(fucntion(item,index,array)&#123;&#125;, thisValue)</span><br></pre></td></tr></table></figure></p>
+<p>some<br>返回true或false，只要有一个返回true，就会终止方法，返回true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.some(function(item, index, array)&#123;&#125;, thisValue)</span><br></pre></td></tr></table></figure></p>
+<p>every<br>返回true或false，只有所有都返回true，就会终止方法，返回true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.every(function(item, index, array)&#123;&#125;, thisValue)</span><br></pre></td></tr></table></figure></p>
+<p>reduce<br>数组提供累加器<br>initial = 第一个项目值，currentValue = 第二个项目值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.reduce(function(total,currentValue,currentIndex,array)&#123;&#125;, initialValue)</span><br></pre></td></tr></table></figure></p>
+<p>注：空数组，无initialValue时报错</p>
+<p>reduceRight<br>数组提供累加器</p>
+<p>find<br>数组中查找符合条件的第一个项目下标，没有则返回undefined<br>findIndex<br>数组中查找符合条件的第一个项目，没有返回-1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let new_array = arr.find(function(currentValue, index, arr), thisArg)</span><br><span class="line">     let new_array = arr.findIndex(function(currentValue, index, arr), thisArg)</span><br></pre></td></tr></table></figure></p>
+<p>keys<br>values<br>entries</p>
+<p>for…of<br>在for..of中如果遍历中途要退出，可以使用break退出循环。</p>
+<p>如果不使用for…of循环，可以手动调用遍历器对象的next方法，进行遍历:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let letter = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];</span><br><span class="line">    let entries = letter.entries();</span><br><span class="line">    console.log(entries.next().value); // [0, &apos;a&apos;]</span><br><span class="line">    console.log(entries.next().value); // [1, &apos;b&apos;]</span><br><span class="line">    console.log(entries.next().value); // [2, &apos;c&apos;]</span><br></pre></td></tr></table></figure></p>
 <p>参考</p>
 <blockquote>
-<p><a href="https://juejin.im/post/5b0903b26fb9a07a9d70c7e0" target="_blank" rel="noopener">倔强</a></p>
+<p><a href="https://juejin.im/post/5b0903b26fb9a07a9d70c7e0" target="_blank" rel="noopener">掘金</a></p>
 </blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/07/19/React模拟事件系统/" style="float: left;">
+        ← React模拟事件系统
+    </a>
     
     
     <a class="pull-right" href="/2019/07/17/My-New-Post/">

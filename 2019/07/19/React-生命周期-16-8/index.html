@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | SHAWN</title>
+  <title>React 生命周期(16.8) | SHAWN</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -176,123 +176,154 @@
 
 
 </div>
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/19/React-生命周期-16-8/">React 生命周期(16.8)</a></h4>
-                            
-                            <p><time datetime="2019-07-19T09:18:11.000Z"><a href="/2019/07/19/React-生命周期-16-8/">2019-07-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/19/React-webpack/">React webpack</a></h4>
-                            
-                            <p><time datetime="2019-07-19T09:16:58.000Z"><a href="/2019/07/19/React-webpack/">2019-07-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/19/React-Diff-算法和虚拟dom/">React Diff 算法和虚拟dom</a></h4>
-                            
-                            <p><time datetime="2019-07-19T09:16:42.000Z"><a href="/2019/07/19/React-Diff-算法和虚拟dom/">2019-07-19</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/19/React模拟事件系统/">React模拟事件系统</a></h4>
-                            
-                            <p><time datetime="2019-07-19T07:53:56.000Z"><a href="/2019/07/19/React模拟事件系统/">2019-07-19</a></time></p>
-                        </div>
-                    
-                        
-                            </div><div class="row boxes">
-                            
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/18/js相关操作/">js相关操作</a></h4>
-                            
-                            <p><time datetime="2019-07-18T15:06:16.000Z"><a href="/2019/07/18/js相关操作/">2019-07-18</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2019/07/17/My-New-Post/">My New Post</a></h4>
-                            
-                            <p><time datetime="2019-07-18T01:23:44.000Z"><a href="/2019/07/17/My-New-Post/">2019-07-17</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2018/12/25/hexo/">HEXO</a></h4>
-                            
-                            <p><time datetime="2018-12-26T00:27:35.000Z"><a href="/2018/12/25/hexo/">2018-12-25</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-07-19T09:18:11.000Z" itemprop="datePublished">
+          2019-07-19
+      </time>
+    
+</span>
+                <h1>React 生命周期(16.8)</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="React生命周期"><a href="#React生命周期" class="headerlink" title="React生命周期"></a>React生命周期</h1><p>生命周期三个阶段</p>
+<ul>
+<li>mounting</li>
+<li>upating</li>
+<li>unmounting</li>
+</ul>
+<h2 id="旧生命周期"><a href="#旧生命周期" class="headerlink" title="旧生命周期"></a>旧生命周期</h2><h3 id="mounting（6个什么周期函数）"><a href="#mounting（6个什么周期函数）" class="headerlink" title="mounting（6个什么周期函数）"></a>mounting（6个什么周期函数）</h3><ol>
+<li>constructor(props)<br>加载时调用一次，可以用来设置state等</li>
+<li><p>getDefaultProps()<br>给props设置默认值，dufaultProps</p>
+</li>
+<li><p>getInitialState()<br>给state设置默认值，state，在constructor中使用this.state</p>
+</li>
+<li><p>componentWillMount()<br>组件加载时调用一次，以后跟新组件不掉用</p>
+</li>
+<li><p>render()<br>组件渲染，创建虚拟dom，调用diff算法，更新dom</p>
+</li>
+<li><p>componentDidMount()<br>组件渲染后掉用，只调用一次</p>
+</li>
+</ol>
+<h3 id="upadting（5个生命周期函数）"><a href="#upadting（5个生命周期函数）" class="headerlink" title="upadting（5个生命周期函数）"></a>upadting（5个生命周期函数）</h3><ol>
+<li><p>componentWillReceiveProps(nextProps)<br>组件加载时不调用，props改变时调用</p>
+</li>
+<li><p>shouldCompnentUpdate(nextProps,nextState)<br>组件接受新的props或者新的state时进行计算，返回true时调用render方法，返回false时不render（不调用render）</p>
+</li>
+<li><p>componentWillUpdate()<br>组件加载时不调用，只是在组件跟新时调用，此时可以修改state</p>
+</li>
+<li><p>render()</p>
+</li>
+<li><p>componentDidUpdate()<br>组件加载时不调用，组件更新完成后调用</p>
+</li>
+</ol>
+<h3 id="unmounting（1个生命周期函数）"><a href="#unmounting（1个生命周期函数）" class="headerlink" title="unmounting（1个生命周期函数）"></a>unmounting（1个生命周期函数）</h3><ol>
+<li>componentWillUnmount()<br>组件渲染之后调用，只调用一次</li>
+</ol>
+<h2 id="新生命周期"><a href="#新生命周期" class="headerlink" title="新生命周期"></a>新生命周期</h2><h3 id="mounting-4个生命周期函数"><a href="#mounting-4个生命周期函数" class="headerlink" title="mounting(4个生命周期函数)"></a>mounting(4个生命周期函数)</h3><ol>
+<li>constructor<br>设置state</li>
+<li><p>static getDerivedStateFromProps(props, state)<br>挂载时调用的最后一个方法，根据初始的props来设置state<br>函数return的就是state，<br>注意： 我们可以将此代码放在 constructor 中，与之相 getDerivedStateFromProps的优点是它更直观 - 它仅用于设置状态，而构造函数有多种用途。<br>总结： getDerivedStateFromProps 的最常见用例（在mount期间）：根据初始props返回状态对象。</p>
+</li>
+<li><p>render</p>
+</li>
+<li><p>componentDidMount</p>
+</li>
+</ol>
+<p>###updating（5个生命周期函数）</p>
+<ol>
+<li><p>static getDerivedStateFromPros</p>
+</li>
+<li><p>shouldComponentUpdate(nextProps, nextState)<br>this.prop获取之前的props<br>this.state获取之前的state</p>
+</li>
+<li><p>render</p>
+</li>
+<li><p>getSnapshotBeforeUpdate(prevProps, prevState)<br>返回的参数作为componentDidUpdata的第三个参数</p>
+</li>
+<li><p>componentDidUpdate(prevProps, prevState, snapshot)</p>
+</li>
+</ol>
+<p>###unmounting（1个生命周期函数）</p>
+<ol>
+<li>componentWillUnmount<br>清除事件监听、定时器等，防止内存泄漏。</li>
+</ol>
+<h3 id="error-Handling（）"><a href="#error-Handling（）" class="headerlink" title="error Handling（）"></a>error Handling（）</h3><ol>
+<li><p>getDerivedStateFromError<br>不做任何负面作用，只是设置state，返回值就是state，捕获任何地方的js错误</p>
+</li>
+<li><p>componentDidCatch<br>只捕获生命周期和render的错误<br>与 getDerivedStateFromError 区别在于不是为了响应错误而更新状态，可以执行任何副作用，例如记录错误。</p>
+</li>
+</ol>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/07/19/React-webpack/">
+        React webpack →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
