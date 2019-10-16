@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>React 生命周期(16.8) | SHAWN</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="SHAWN">
+    <meta name="author" content="LEISHAWN">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="SHAWN" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+<div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+    <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+        <img src="/img/close.png" alt="Close">
+    </div>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu">
+        <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+        <li><a href="/archives" class="animsition-link" title="archive">archives</a>
+        </li>
+        <!-- Dropdown Menu -->
+        
+        
+            <li>
+                <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/categories/Dictionaries/" class="animsition-link">Dictionaries
+                                <small>(2)</small>
+                            </a></li>
+                    
+                        <li><a href="/categories/gloabal/" class="animsition-link">gloabal
+                                <small>(1)</small>
+                            </a></li>
+                    
+                </ul>
+            </li>
+        
+        
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://xxxxxmiss.github.io/" class="animsition-link">xxxxxMiss</a></li>
+                    
+                </ul>
+            </li>
+        
+    </ul>
+    <!-- Lists in Slidebars -->
+<!--    <ul class="sb-menu secondary">-->
+<!--        -->
+<!--        <li><a href="/about.html" class="animsition-link" title="about">About</a></li>-->
+<!--        <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>-->
+<!--    </ul>-->
+</div>
+
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+<!-- ============================ Header & Logo bar =========================== -->
+
+<div id="navigation" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <!-- Nav logo -->
+            <div class="logo">
+                <a href="/" title="Logo" class="animsition-link">
+                     <img src="/img/logo.png" alt="Logo" width="35px;">
+                    
+                </a>
+            </div>
+            <!-- // Nav logo -->
+            <!-- Info-bar -->
+            <nav>
+                <ul class="nav">
+                    <li><a href="/" class="animsition-link">SHAWN</a></li>
+                    <li class="nolink"><span>Always </span>Creative.</li>
+                    
+                        <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>
+                        </li>
+                    
+                    
+                        <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                    
+                    
+                        <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                    
+                    
+                        <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                    
+                    
+                        <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                    
+                    <li class="nolink"><span>Welcome!</span></li>
+                </ul>
+            </nav>
+            <!--// Info-bar -->
+        </div>
+        <!-- // .container -->
+        <div class="learnmore sb-toggle-right">More</div>
+        <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
+        </button>
+    </div>
+    <!-- // .navbar-inner -->
+</div>
+
+<!-- ============================ Header & Logo bar =========================== -->
+
+<div id="sb-site">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+
+</div>
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-07-18T21:18:11.000Z" itemprop="datePublished">
+          2019-07-19
+      </time>
+    
+</span>
+                <h1>React 生命周期(16.8)</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="React生命周期"><a href="#React生命周期" class="headerlink" title="React生命周期"></a>React生命周期</h1><p>生命周期三个阶段</p>
+<ul>
+<li>mounting</li>
+<li>upating</li>
+<li>unmounting</li>
+</ul>
+<h2 id="旧生命周期"><a href="#旧生命周期" class="headerlink" title="旧生命周期"></a>旧生命周期</h2><p><img src="/images/react/生命周期.png" alt="旧生命周期"></p>
+<h3 id="mounting（6个什么周期函数）"><a href="#mounting（6个什么周期函数）" class="headerlink" title="mounting（6个什么周期函数）"></a>mounting（6个什么周期函数）</h3><ol>
+<li>constructor(props)<br>加载时调用一次，可以用来设置state等</li>
+<li><p>getDefaultProps()<br>给props设置默认值，dufaultProps</p>
+</li>
+<li><p>getInitialState()<br>给state设置默认值，state，在constructor中使用this.state</p>
+</li>
+<li><p>componentWillMount()<br>组件加载时调用一次，以后跟新组件不掉用</p>
+</li>
+<li><p>render()<br>组件渲染，创建虚拟dom，调用diff算法，更新dom</p>
+</li>
+<li><p>componentDidMount()<br>组件渲染后掉用，只调用一次</p>
+</li>
+</ol>
+<h3 id="upadting（5个生命周期函数）"><a href="#upadting（5个生命周期函数）" class="headerlink" title="upadting（5个生命周期函数）"></a>upadting（5个生命周期函数）</h3><ol>
+<li><p>componentWillReceiveProps(nextProps)<br>组件加载时不调用，props改变时调用</p>
+</li>
+<li><p>shouldCompnentUpdate(nextProps,nextState)<br>组件接受新的props或者新的state时进行计算，返回true时调用render方法，返回false时不render（不调用render）</p>
+</li>
+<li><p>componentWillUpdate()<br>组件加载时不调用，只是在组件跟新时调用，此时可以修改state</p>
+</li>
+<li><p>render()</p>
+</li>
+<li><p>componentDidUpdate()<br>组件加载时不调用，组件更新完成后调用</p>
+</li>
+</ol>
+<h3 id="unmounting（1个生命周期函数）"><a href="#unmounting（1个生命周期函数）" class="headerlink" title="unmounting（1个生命周期函数）"></a>unmounting（1个生命周期函数）</h3><ol>
+<li>componentWillUnmount()<br>组件渲染之后调用，只调用一次</li>
+</ol>
+<h2 id="新生命周期"><a href="#新生命周期" class="headerlink" title="新生命周期"></a>新生命周期</h2><h3 id="mounting-4个生命周期函数"><a href="#mounting-4个生命周期函数" class="headerlink" title="mounting(4个生命周期函数)"></a>mounting(4个生命周期函数)</h3><ol>
+<li>constructor<br>设置state</li>
+<li><p>static getDerivedStateFromProps(props, state)<br>挂载时调用的最后一个方法，根据初始的props来设置state<br>函数return的就是state，<br>注意： 我们可以将此代码放在 constructor 中，与之相 getDerivedStateFromProps的优点是它更直观 - 它仅用于设置状态，而构造函数有多种用途。<br>总结： getDerivedStateFromProps 的最常见用例（在mount期间）：根据初始props返回状态对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class ScrollingList extends React.Component &#123;</span><br><span class="line">  listRef = React.createRef();</span><br><span class="line"></span><br><span class="line">  getSnapshotBeforeUpdate(prevProps, prevState) &#123;</span><br><span class="line">    // 如果在列表中添加新项目</span><br><span class="line">    // 获取列表的当前高度，以便我们稍后调整滚动</span><br><span class="line">    if (prevProps.list.length &lt; this.props.list.length) &#123;</span><br><span class="line">      return this.listRef.current.scrollHeight;</span><br><span class="line">    &#125;</span><br><span class="line">    return null;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentDidUpdate(prevProps, prevState, snapshot) &#123;</span><br><span class="line">    // 如果我们 snapshot 的值不为空，说明添加了新项目</span><br><span class="line">    // 调整滚动，以便这些新项目不会将旧项目推出可视区域</span><br><span class="line">    if (snapshot !== null) &#123;</span><br><span class="line">      this.listRef.current.scrollTop +=</span><br><span class="line">        this.listRef.current.scrollHeight - snapshot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div ref=&#123;this.listRef&#125;&gt;&#123;/* ...contents... */&#125;&lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>render</p>
+</li>
+<li><p>componentDidMount</p>
+</li>
+</ol>
+<h3 id="updating（5个生命周期函数）"><a href="#updating（5个生命周期函数）" class="headerlink" title="updating（5个生命周期函数）"></a>updating（5个生命周期函数）</h3><ol>
+<li><p>static getDerivedStateFromPros</p>
+</li>
+<li><p>shouldComponentUpdate(nextProps, nextState)<br>this.prop获取之前的props<br>this.state获取之前的state</p>
+</li>
+<li><p>render</p>
+</li>
+<li><p>getSnapshotBeforeUpdate(prevProps, prevState)<br>返回的参数作为componentDidUpdata的第三个参数</p>
+</li>
+<li><p>componentDidUpdate(prevProps, prevState, snapshot)</p>
+</li>
+</ol>
+<h3 id="unmounting（1个生命周期函数）-1"><a href="#unmounting（1个生命周期函数）-1" class="headerlink" title="unmounting（1个生命周期函数）"></a>unmounting（1个生命周期函数）</h3><ol>
+<li>componentWillUnmount<br>清除事件监听、定时器等，防止内存泄漏。</li>
+</ol>
+<h3 id="error-Handling（）"><a href="#error-Handling（）" class="headerlink" title="error Handling（）"></a>error Handling（）</h3><ol>
+<li><p>static getDerivedStateFromError<br>不做任何负面作用，只是设置state，返回值就是state，捕获任何地方的js错误</p>
+</li>
+<li><p>componentDidCatch<br>只捕获生命周期和render的错误<br>与 getDerivedStateFromError 区别在于不是为了响应错误而更新状态，可以执行任何副作用，例如记录错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class ErrorBoundary extends Component &#123;</span><br><span class="line">  state = &#123; errorMessage: null &#125;;</span><br><span class="line">  static getDerivedStateFromError(error) &#123;</span><br><span class="line">    return &#123; errorMessage: error.message &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  componentDidCatch(error, info) &#123;</span><br><span class="line">    console.log(error, info);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    if (this.state.errorMessage) &#123;</span><br><span class="line">      return &lt;h1&gt;Oops! &#123;this.state.errorMessage&#125;&lt;/h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">    return this.props.children;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>reference</p>
+<blockquote>
+<p><a href="https://juejin.im/post/5c9b57d65188251d081cba4a#heading-6" target="_blank" rel="noopener">React v16 生命周期函数详解：如何、何时使用它们（React 组件生命周期的修订和最新指南）</a></p>
+</blockquote>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/07/20/GIT/" style="float: left;">
+        ← GIT
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/07/19/React-webpack/">
+        React webpack →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By LEISHAWN. All Rights Reserved.
+                </p>
+<!--                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>-->
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
