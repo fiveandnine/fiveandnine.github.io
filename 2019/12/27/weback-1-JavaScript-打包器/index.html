@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>weback-1-JavaScript 打包器 | SHAWN</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="SHAWN">
+    <meta name="author" content="LEISHAWN">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="SHAWN" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+<div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+    <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+        <img src="/img/close.png" alt="Close">
+    </div>
+    <!-- Lists in Slidebars -->
+    <ul class="sb-menu">
+        <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+        <li><a href="/archives" class="animsition-link" title="archive">archives</a>
+        </li>
+        <!-- Dropdown Menu -->
+        
+        
+            <li>
+                <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/categories/Dictionaries/" class="animsition-link">Dictionaries
+                                <small>(2)</small>
+                            </a></li>
+                    
+                        <li><a href="/categories/gloabal/" class="animsition-link">gloabal
+                                <small>(1)</small>
+                            </a></li>
+                    
+                </ul>
+            </li>
+        
+        
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://xxxxxmiss.github.io/" class="animsition-link">xxxxxMiss</a></li>
+                    
+                </ul>
+            </li>
+        
+    </ul>
+    <!-- Lists in Slidebars -->
+<!--    <ul class="sb-menu secondary">-->
+<!--        -->
+<!--        <li><a href="/about.html" class="animsition-link" title="about">About</a></li>-->
+<!--        <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>-->
+<!--    </ul>-->
+</div>
+
+<!-- ============================ END Off-canvas navigation =========================== -->
+
+<!-- ============================ #sb-site Main Page Wrapper =========================== -->
+<!-- ============================ Header & Logo bar =========================== -->
+
+<div id="navigation" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <!-- Nav logo -->
+            <div class="logo">
+                <a href="/" title="Logo" class="animsition-link">
+                     <img src="/img/logo.png" alt="Logo" width="35px;">
+                    
+                </a>
+            </div>
+            <!-- // Nav logo -->
+            <!-- Info-bar -->
+            <nav>
+                <ul class="nav">
+                    <li><a href="/" class="animsition-link">SHAWN</a></li>
+                    <li class="nolink"><span>Always </span>Creative.</li>
+                    
+                        <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>
+                        </li>
+                    
+                    
+                        <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                    
+                    
+                        <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                    
+                    
+                        <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                    
+                    
+                        <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                    
+                    <li class="nolink"><span>Welcome!</span></li>
+                </ul>
+            </nav>
+            <!--// Info-bar -->
+        </div>
+        <!-- // .container -->
+        <div class="learnmore sb-toggle-right">More</div>
+        <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
+        </button>
+    </div>
+    <!-- // .navbar-inner -->
+</div>
+
+<!-- ============================ Header & Logo bar =========================== -->
+
+<div id="sb-site">
+    <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+
+</div>
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-12-27T08:13:31.000Z" itemprop="datePublished">
+          2019-12-27
+      </time>
+    
+    
+    | 
+    <a href="/tags/webpack/">webpack</a>
+    
+    
+</span>
+                <h1>weback-1-JavaScript 打包器</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="JS打包"><a href="#JS打包" class="headerlink" title="JS打包"></a>JS打包</h2><ul>
+<li><p>解析入口文件，获取所有的依赖项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 模块</span><br><span class="line">&apos;src/entry&apos;: &#123;</span><br><span class="line">  code: &apos;&apos;, // 文件解析后内容</span><br><span class="line">  dependencies: [&quot;./message.js&quot;], // 依赖项</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>递归解析所有的依赖项，生成依赖关系图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// graph 依赖关系图</span><br><span class="line">let graph = &#123;</span><br><span class="line">  // entry 模块</span><br><span class="line">  &quot;src/entry.js&quot;: &#123;</span><br><span class="line">    code: &apos;&apos;,</span><br><span class="line">    dependencies: [&quot;./src/message.js&quot;],</span><br><span class="line">    mapping:&#123;</span><br><span class="line">      &quot;./message.js&quot;: &quot;src/message.js&quot;       </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  // message 模块</span><br><span class="line">  &quot;src/message.js&quot;: &#123;</span><br><span class="line">    code: &apos;&apos;,</span><br><span class="line">    dependencies: [],</span><br><span class="line">    mapping:&#123;&#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用依赖图，返回一个可以在浏览器运行的js<br>立即执行函数IIFE</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(function(man)&#123;</span><br><span class="line">    function(name)&#123;</span><br><span class="line">        console.log(name)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)(&#123;name: &apos;xxx&apos;&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输出到dist/bundle.js</p>
+</li>
+</ul>
+<p>fs.writeFile 写入 dist/bundle.js 即可。</p>
+<h2 id="解析入口文件，遍历所有依赖项"><a href="#解析入口文件，遍历所有依赖项" class="headerlink" title="解析入口文件，遍历所有依赖项"></a>解析入口文件，遍历所有依赖项</h2><p>@babel/parser解析入口文件，获取AST<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 解析文件内容及其依赖，</span><br><span class="line"> * 期望返回：</span><br><span class="line"> *      dependencies: 文件依赖模块</span><br><span class="line"> *      code: 文件解析内容 </span><br><span class="line"> * @param &#123;string&#125; filename 文件路径</span><br><span class="line"> */</span><br><span class="line">function createAsset(filename) &#123;</span><br><span class="line">  // 读取文件内容</span><br><span class="line">  const content = fs.readFileSync(filename, &apos;utf-8&apos;)</span><br><span class="line">  // 使用 @babel/parser（JavaScript解析器）解析代码，生成 ast（抽象语法树）</span><br><span class="line">  const ast = babelParser.parse(content, &#123;</span><br><span class="line">    sourceType: &quot;module&quot;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  // 从 ast 中获取所有依赖模块（import），并放入 dependencies 中</span><br><span class="line">  const dependencies = []</span><br><span class="line">  traverse(ast, &#123;</span><br><span class="line">    // 遍历所有的 import 模块，并将相对路径放入 dependencies</span><br><span class="line">    ImportDeclaration: (&#123;</span><br><span class="line">      node</span><br><span class="line">    &#125;) =&gt; &#123;</span><br><span class="line">      dependencies.push(node.source.value)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  // 获取文件内容</span><br><span class="line">  const &#123;</span><br><span class="line">    code</span><br><span class="line">  &#125; = transformFromAst(ast, null, &#123;</span><br><span class="line">    presets: [&apos;@babel/preset-env&apos;],</span><br><span class="line">  &#125;)</span><br><span class="line">  // 返回结果</span><br><span class="line">  return &#123;</span><br><span class="line">    dependencies,</span><br><span class="line">    code,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="递归解析所有依赖项，生成一个依赖关系图"><a href="#递归解析所有依赖项，生成一个依赖关系图" class="headerlink" title="递归解析所有依赖项，生成一个依赖关系图"></a>递归解析所有依赖项，生成一个依赖关系图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">//获取入口文件</span><br><span class="line">const mainAssert = createAsset(entry)</span><br><span class="line">//解析文件内容及其依赖</span><br><span class="line">function createAsset(filename)&#123;</span><br><span class="line">    const content = fs.readFileSync(filename,&apos;utf-8&apos;)</span><br><span class="line">    const ast = babelParser.parse(content, &#123;</span><br><span class="line">        sourceType: &quot;module&quot;</span><br><span class="line">    &#125;)</span><br><span class="line">    const dependencies = []</span><br><span class="line">    traverse(ast, &#123;</span><br><span class="line">        // 遍历所有的 import 模块，并将相对路径放入 dependencies</span><br><span class="line">        ImportDeclaration: (&#123;</span><br><span class="line">          node</span><br><span class="line">        &#125;) =&gt; &#123;</span><br><span class="line">          dependencies.push(node.source.value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    // 获取文件内容</span><br><span class="line">    const &#123;</span><br><span class="line">        code</span><br><span class="line">    &#125; = transformFromAst(ast, null, &#123;</span><br><span class="line">        presets: [&apos;@babel/preset-env&apos;],</span><br><span class="line">    &#125;)</span><br><span class="line">    // 返回结果</span><br><span class="line">    return &#123;</span><br><span class="line">        dependencies,</span><br><span class="line">        code,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//创建依赖关系图</span><br><span class="line">const graph = &#123;</span><br><span class="line">    [entry]: mainAssert</span><br><span class="line">&#125;</span><br><span class="line">//递归所有依赖</span><br><span class="line">function createGraph(entry) &#123;</span><br><span class="line">  // 从入口文件开始，解析每一个依赖资源，并将其一次放入队列中</span><br><span class="line">  const mainAssert = createAsset(entry)</span><br><span class="line">  const queue = &#123;</span><br><span class="line">    [entry]: mainAssert</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 递归遍历，获取所有的依赖</span><br><span class="line">   * @param &#123;*&#125; assert 入口文件</span><br><span class="line">   */</span><br><span class="line">  function recursionDep(filename, assert) &#123;</span><br><span class="line">    // 跟踪所有依赖文件（模块唯一标识符）</span><br><span class="line">    assert.mapping = &#123;&#125;</span><br><span class="line">    // 由于所有依赖模块的 import 路径为相对路径，所以获取当前绝对路径</span><br><span class="line">    const dirname = path.dirname(filename)</span><br><span class="line">    assert.dependencies.forEach(relativePath =&gt; &#123;</span><br><span class="line">      // 获取绝对路径，以便于 createAsset 读取文件</span><br><span class="line">      const absolutePath = path.join(dirname, relativePath)</span><br><span class="line">      // 与当前 assert 关联</span><br><span class="line">      assert.mapping[relativePath] = absolutePath</span><br><span class="line">      // 依赖文件没有加入到依赖图中，才让其加入，避免模块重复打包</span><br><span class="line">      if (!queue[absolutePath]) &#123;</span><br><span class="line">        // 获取依赖模块内容</span><br><span class="line">        const child = createAsset(absolutePath)</span><br><span class="line">        // 将依赖放入 queue，以便于 for 继续解析依赖资源的依赖，直到所有依赖解析完成，这就构成了一个从入口文件开始的依赖图</span><br><span class="line">        queue[absolutePath] = child</span><br><span class="line">        if (child.dependencies.length &gt; 0) &#123;</span><br><span class="line">          // 继续递归</span><br><span class="line">          recursionDep(absolutePath, child)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 遍历 queue，获取每一个 asset 及其所以依赖模块并将其加入到队列中，直至所有依赖模块遍历完成</span><br><span class="line">  for (let filename in queue) &#123;</span><br><span class="line">    let assert = queue[filename]</span><br><span class="line">    recursionDep(filename, assert)</span><br><span class="line">  &#125;</span><br><span class="line">  // 返回依赖图</span><br><span class="line">  return queue</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用依赖图，返回浏览器可以运行的js文件"><a href="#使用依赖图，返回浏览器可以运行的js文件" class="headerlink" title="使用依赖图，返回浏览器可以运行的js文件"></a>使用依赖图，返回浏览器可以运行的js文件</h2><p><a href="https://juejin.im/post/5e04c935e51d4557ea02c097#heading-14" target="_blank" rel="noopener">参考</a><br><a href="https://github.com/sisterAn/minipack/blob/master/index.js" target="_blank" rel="noopener">github</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/12/27/node-path/" style="float: left;">
+        ← node path
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/12/13/设计模式/">
+        设计模式 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By LEISHAWN. All Rights Reserved.
+                </p>
+<!--                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>-->
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

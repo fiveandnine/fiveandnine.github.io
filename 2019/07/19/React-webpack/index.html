@@ -182,12 +182,38 @@
           2019-07-19
       </time>
     
+    
+    | 
+    <a href="/tags/react/">react</a>,
+    
+    <a href="/tags/webpack/">webpack</a>
+    
+    
 </span>
                 <h1>React webpack</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<h1 id="create-react-app"><a href="#create-react-app" class="headerlink" title="create react app"></a>create react app</h1><h2 id="create-react-app-1"><a href="#create-react-app-1" class="headerlink" title="create-react-app"></a>create-react-app</h2><h3 id="createReactApp"><a href="#createReactApp" class="headerlink" title="createReactApp"></a>createReactApp</h3><p>node执行包安装的流程，并把文件模版拷贝到对应目录下</p>
+<ul>
+<li>判断node版本 create-react-app/index</li>
+<li>命令行初始化，help帮助提示</li>
+<li>判断用户输入参数是否合法</li>
+<li>创建package.json</li>
+<li>使用某个版本的react-script执行安装依赖</li>
+<li>安装完之后跑 react-scripts/script/init.js 修改 package.json 的依赖版本，运行脚本，并拷贝对应的模板到目录里。</li>
+</ul>
+<h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><p>修改package.json，执行安装，拷贝模版</p>
+<p><a href="https://github.com/facebook/create-react-app/blob/master/packages/cra-template/template/README.md" target="_blank" rel="noopener">模版</a></p>
+<h2 id="react-scripts"><a href="#react-scripts" class="headerlink" title="react-scripts/"></a>react-scripts/</h2><h3 id="react-scripts-index-js"><a href="#react-scripts-index-js" class="headerlink" title="react-scripts/index.js"></a>react-scripts/index.js</h3><h3 id="start-js"><a href="#start-js" class="headerlink" title="start.js"></a>start.js</h3><h3 id="env-js"><a href="#env-js" class="headerlink" title="env.js"></a>env.js</h3><p>设置环境变量，</p>
+<ul>
+<li>dotenv-expand</li>
+<li>dotenv</li>
+</ul>
+<p>ref:</p>
+<p><a href="https://jsonz1993.github
+.io/2018/05/create-react-app-o/#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96" target="_blank" rel="noopener">create-react-app 源码解析</a><br><a href="https://juejin.im/post/5af98aaf518825426d2d4142" target="_blank" rel="noopener">create-react-app 源码解析之react-scripts</a></p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>

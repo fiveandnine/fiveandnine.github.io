@@ -213,126 +213,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/10/15/saga模式/">saga模式</a></h3>
+                    <h3><a href="/2020/04/28/js词法环境/">js词法环境</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-10-15T09:31:03.000Z" itemprop="datePublished">
-          2019-10-15
-      </time>
-    
-    
-    | 
-    <a href="/tags/设计模式/">设计模式</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        saga模式Saga概念处理长活事务（long lived transaction）将长活事物拆分为可以交错运行的子事务集合其中的每个子事务都是与数据库保持一致性的真实事务论文地址
-名词解释
-事务 由一组sql语句组成的逻辑处理单元
-ACID 
-Atomic（原子性）：指整个数据库事务是不可分割的工作单位。只有使据库中所有的操作执行成功，才算整个事务成功；事务中任何一个SQL语句执行失败，那么已经执行成功的SQL语句也必须撤销，数据库状
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/10/15/saga模式/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/10/08/领域驱动/">领域驱动</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-10-08T09:03:27.000Z" itemprop="datePublished">
-          2019-10-08
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        将每一块业务划分成不同的领域，各领域下包含哪些服务，每个页面调用的并不是 API 接口，而是各自领域的服务。
-领域驱动设计提出领域的角色是需求方
-每个需求都会对应到某个领域
-例如 商品搜索 对应 商品中心域    用户登陆 对应 用户信息&amp;&amp;鉴权域
-从产品–后端–前端对应的领域相同
-前端
-视图尽可能薄
-不写重复逻辑
-不同职责的代码进行分层 
-前端字段不受后端字段影响
-可纵观全局领域
-
-
-实践123456789101112
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/10/08/领域驱动/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/09/18/docker基础/">docker基础</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-09-18T06:16:04.000Z" itemprop="datePublished">
-          2019-09-18
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        安装123brew cask install dockerdocker infodocker version
-brew安装1/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-brew
-build12docker build -t xl/nginx:1.0 .docker 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/09/18/docker基础/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/24/函数组合和函数管道/">函数组合和函数管道</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-24T07:32:17.000Z" itemprop="datePublished">
-          2019-08-24
+      <time datetime="2020-04-28T08:22:33.000Z" itemprop="datePublished">
+          2020-04-28
       </time>
     
     
@@ -346,13 +231,13 @@ build12docker build -t xl/nginx:1.0 .docker
                 <div class="col-md-8">
                     <p>
                       
-                        函数组合 compose每个函数的输出作为另一个尚未可知程序的输入123456function compose (...fns)&#123;    &lt;!--  --&gt;&#125;compose(fn1, fn2)(x) ===&gt; fn1(fn2(x))compose(fn1, fn2, f3)(x) ===&gt; fn1(fn2(f3(x)))
-函数开闭原则：软件中的对象（类，模块，函数等等）应该对于扩展是开放的，但
+                        彻底搞懂javascript-词法环境(Lexical Environments)
+
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/08/24/函数组合和函数管道/">Read More...</a>
+                        <a href="/2020/04/28/js词法环境/">Read More...</a>
                     </p>
                     
                 </div>
@@ -364,11 +249,46 @@ build12docker build -t xl/nginx:1.0 .docker
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/08/20/egg加载器/">egg加载器</a></h3>
+                    <h3><a href="/2020/04/26/js引擎/">js引擎</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-08-20T07:38:59.000Z" itemprop="datePublished">
-          2019-08-20
+      <time datetime="2020-04-26T08:39:17.000Z" itemprop="datePublished">
+          2020-04-26
+      </time>
+    
+    
+    | 
+    <a href="/tags/js/">js</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        js引擎相关概念执行环境栈、全局对象、执行环境、变量对象、活动对象、作用域、作用域链12345678910var x = 1function A(y)&#123;   var x = 2;  //定义一个局部变量 x   function B(z)&#123; //定义一个内部函数 B       console.log(x+y+z);   &#125;   return B; //返回函数B的引用&#125;var C = A(1);
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/04/26/js引擎/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/04/23/egg插件/">egg插件</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-04-23T08:35:42.000Z" itemprop="datePublished">
+          2020-04-23
       </time>
     
     
@@ -384,20 +304,13 @@ build12docker build -t xl/nginx:1.0 .docker
                 <div class="col-md-8">
                     <p>
                       
-                        框架、插件、应用
-应用启动需要框架，某个场景功能需要插件
-插件完成某个功能
-框架是一个启动器，默认是egg，有了它才能启动，框架也是一个封装器，将插件功能聚合统一
-
-加载单元插件框架应用都是加载单元
-加载优先级：插件 ==&gt; 框架 ==&gt; 应用
-https://eggjs.org/zh-cn/advanced/loader.html
+                        插件中间件 插件 应用的关系插件是迷你应用，没有路由router和控制器controller插件包含service、中间件、配置等插件没有 plugin.js，只能声明跟其他插件的依赖，而不能决定其他插件的开启与否。
 
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/08/20/egg加载器/">Read More...</a>
+                        <a href="/2020/04/23/egg插件/">Read More...</a>
                     </p>
                     
                 </div>
@@ -409,16 +322,16 @@ https://eggjs.org/zh-cn/advanced/loader.html
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/08/10/Node-js的进程与线程/">Node.js的进程与线程</a></h3>
+                    <h3><a href="/2020/04/13/docker-其他/">docker 其他</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-08-09T23:30:24.000Z" itemprop="datePublished">
-          2019-08-10
+      <time datetime="2020-04-13T11:35:25.000Z" itemprop="datePublished">
+          2020-04-13
       </time>
     
     
     | 
-    <a href="/tags/Node/">Node</a>
+    <a href="/tags/docker/">docker</a>
     
     
 </span>
@@ -427,12 +340,14 @@ https://eggjs.org/zh-cn/advanced/loader.html
                 <div class="col-md-8">
                     <p>
                       
-                        进程process是计算机程序在某一数据集合上的一次运行活动 是计算机进行资源分配和调度的基本单位进程是线程的容器。12345678//node进程const http = require(&apos;http&apos;)const server = http.createServer()server.listen(3000, () =&gt; &#123;    process.title = &apos;node 进程&apos;
+                        Docker 社区已经创建了许多开源工具，它们能帮我们处理各种用例。作者在本文中推荐了 5 款认为最有用的 Docker 工具，分别是 Watchtower（自动更新 Docker 容器）、docker-gc（容器和镜像的垃圾回收）、docker-slim（容器瘦身）、 rocker：突破 Dockerfile 的限制，以及 ctop（容器的类顶层接口）。
+refer
+
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/08/10/Node-js的进程与线程/">Read More...</a>
+                        <a href="/2020/04/13/docker-其他/">Read More...</a>
                     </p>
                     
                 </div>
@@ -444,16 +359,16 @@ https://eggjs.org/zh-cn/advanced/loader.html
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/08/10/defineProperty/">defineProperty</a></h3>
+                    <h3><a href="/2020/04/07/webpack-SplitChunksPlugin/">webpack-SplitChunksPlugin</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-08-09T21:01:21.000Z" itemprop="datePublished">
-          2019-08-10
+      <time datetime="2020-04-07T12:49:40.000Z" itemprop="datePublished">
+          2020-04-07
       </time>
     
     
     | 
-    <a href="/tags/js/">js</a>
+    <a href="/tags/webpack/">webpack</a>
     
     
 </span>
@@ -462,20 +377,17 @@ https://eggjs.org/zh-cn/advanced/loader.html
                 <div class="col-md-8">
                     <p>
                       
-                        属性的特性以及内部属性js三种类型属性
-
-命名数据属性 有一个确定值
-命名访问器属性 通过getter和setter进行读取和赋值的属性
-内部属性 由JavaScript引擎内部使用的属性，不能通过JavaScript代码直接访问到
-
-Object.defineProperty()两种为对象设置属性（不可以混用）
-
-数据属性123456let obj = &#123;&#125;Object.definePropety(obj, &ap
+                        splitChunk插件配置项chunks表示哪些代码需要优化，initial（初始块）async（按需加载块，默认）all（全部）
+minSize形成一个新代码块最小的体积
+minChunks默认为1，分割之前这个代码块最小被引用的次数（保证代码的复用，默认配置不需要多次应用也可以被分割）
+maxInitialRequests一个入口最大的并行请求数，默认3
+maxAsyncRequests按需加载最大的并行请求数，默认5
+缓存组te
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/08/10/defineProperty/">Read More...</a>
+                        <a href="/2020/04/07/webpack-SplitChunksPlugin/">Read More...</a>
                     </p>
                     
                 </div>
@@ -487,47 +399,16 @@ Object.defineProperty()两种为对象设置属性（不可以混用）
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/08/10/throttle&&debounce/">throttle&&debounce</a></h3>
+                    <h3><a href="/2020/04/07/React-hooks/">React-hooks</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-08-09T20:14:08.000Z" itemprop="datePublished">
-          2019-08-10
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        截流throttle在一段时间内(interval内只执行一次)，无论触发多少次，都只认第一次12document.addEventListener(fun)fun = throttle(fn, interval)
-1234567891011121314function throttle(fn, interval)&#123;    let last = 0;    &lt;!-- 返回一个函数 --&gt;    return fun
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/10/throttle&&debounce/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/07/24/深拷贝&浅拷贝/">深拷贝&浅拷贝</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-07-23T21:22:08.000Z" itemprop="datePublished">
-          2019-07-24
+      <time datetime="2020-04-07T05:46:25.000Z" itemprop="datePublished">
+          2020-04-07
       </time>
     
     
     | 
-    <a href="/tags/js/">js</a>
+    <a href="/tags/react/">react</a>
     
     
 </span>
@@ -536,19 +417,13 @@ Object.defineProperty()两种为对象设置属性（不可以混用）
                 <div class="col-md-8">
                     <p>
                       
-                        堆和栈的区别堆（stack）系统自动分配的地址，由系统自动释放
-栈（heap） 动态分配的内存，不会自动释放
-ECMAScript数据类型基本数据类型（5个）string, number, boolean, null, undefined
-存放在栈中的简单数据段，直接存值，所以直接访问
-   基本类型不可改变，通常情况下重新复制，不是改变基本数据类型的值
-引用数据类型object
-存放堆内存中，在栈内存中存放的是指针
-‘==’比较相关转
+                        capture value每次render的内容都会形成一个快照，并保存下来，因此当前状态变更而rerender的时候，就形成了 N 个 Render 状态，而每个 Render 状态都拥有自己固定不变的 Props 与 State」
+
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/07/24/深拷贝&浅拷贝/">Read More...</a>
+                        <a href="/2020/04/07/React-hooks/">Read More...</a>
                     </p>
                     
                 </div>
@@ -560,16 +435,18 @@ ECMAScript数据类型基本数据类型（5个）string, number, boolean, null,
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2019/07/22/js基础函数/">js基础函数</a></h3>
+                    <h3><a href="/2020/04/03/node-glob/">node glob</a></h3>
                     <span>
                         <span class="post-meta">
-      <time datetime="2019-07-22T02:05:05.000Z" itemprop="datePublished">
-          2019-07-22
+      <time datetime="2020-04-03T06:38:10.000Z" itemprop="datePublished">
+          2020-04-03
       </time>
     
     
     | 
-    <a href="/tags/js/">js</a>
+    <a href="/tags/webpack/">webpack</a>,
+    
+    <a href="/tags/node/">node</a>
     
     
 </span>
@@ -578,15 +455,112 @@ ECMAScript数据类型基本数据类型（5个）string, number, boolean, null,
                 <div class="col-md-8">
                     <p>
                       
-                        call(thisArg, arg1, aeg2, …)把需要改变this指向的方法挂载到目标this上执行并返回调用一个对象的方法，以另一个对象替换当前对象，如果没有就用Global对象替换参数：
+                        minimatch库
+规则12345*  匹配一个路径中0或多个字符，不匹配以 .开头的文件，如 .a** 匹配一个或多个子文件夹?  匹配一个字符&#123;a|b&#125; 匹配a或者b! 排除文件
 
-thisArg 当要被用作当前对象的对象
-arg1, aeg2, … 要传入方法的参数12345678910Function.prototype.mycall = function(context=window)&#123;    if 
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2019/07/22/js基础函数/">Read More...</a>
+                        <a href="/2020/04/03/node-glob/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/03/31/webpack-plugin/">webpack-plugin</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-03-31T02:50:55.000Z" itemprop="datePublished">
+          2020-03-31
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        多页面plugin1.配置一个模版路径，解析里面所有的html模版2.配置解析模版的加载器loader, 用于解析模版，在module.loaders中配置同样有效3.配置exclude等通用配置4.可以配置模版后缀，用与过滤文件夹下的非文件模版5.还要提供一套规则来引用生产的css和js
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/03/31/webpack-plugin/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/03/27/docker-compose/">docker-compose</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-03-27T13:18:21.000Z" itemprop="datePublished">
+          2020-03-27
+      </time>
+    
+    
+    | 
+    <a href="/tags/node/">node</a>,
+    
+    <a href="/tags/docker/">docker</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100# docker-compose.yml# 语法版本( 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/03/27/docker-compose/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2020/03/25/异步编程-promise-async-Generator/">异步编程 promise async Generator</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2020-03-25T12:52:47.000Z" itemprop="datePublished">
+          2020-03-25
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Promise12345678910cons p = new Promise((resolve, reject) =&gt; &#123;  setTimeOut(()=&gt;&#123;    resolve(&apos;resolve value&apos;)  &#125;, 2000)    setTimeOut(()=&gt;&#123;    reject(&apos;reject value&apos;)  &#125;
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2020/03/25/异步编程-promise-async-Generator/">Read More...</a>
                     </p>
                     
                 </div>
